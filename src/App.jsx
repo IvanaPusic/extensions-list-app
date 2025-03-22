@@ -1,11 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import data from './data';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [extensions, setExtensions] = useState(data)
+
+  useEffect(() => {
+    console.log(extensions);   
+  },[]);
 
   return (
     <>
-      <h1 class="text-3xl font-bold underline ">Hello world!</h1>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </>
   )
 }
